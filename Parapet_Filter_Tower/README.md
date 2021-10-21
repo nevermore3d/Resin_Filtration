@@ -38,6 +38,22 @@ All files should be printed in the provided orientations, good bed adhesion is n
 The tower should now "snap" onto the base magnetically, and hold well enough to carry by the tower. You can use rubber cabinet feet, or VHB tape to attach the base to your printer. Run power to the fan, either by feeding the fan wiring through the Z axis holes in the base plate, a hole in the back of your printer, etc.
 
 You should feel a gentle breeze when the fan is running, and slight suction at the top of the tower. If you don't, your fan is not powerful enough. I've only tested a 24v fan, but it pulls suction all the way down to 11v.
+ 
+## Installation and Power
+
+VHB foam tape can be used to attach the Parapet to your printer's base.
+
+Powering the fan is up to the user, I have documented my current setup here.
+
+DC fans can be speed controlled through voltage, so I chose to use a cheap [LM2596 DC-DC buck converter](https://www.amazon.com/dp/B07F3S5ZDX) and [JST-XHP Pigtail wires](https://www.amazon.com/dp/B07YWJKGR9) to make pigtail to get power from the ChituBoard's `MB_F` port. 
+
+I soldered both a male and female connector to my LM2596 board, and a female to the DC-Out side. I plugged the stock cooling fan into the 24V side, then the Parapet's 4020 into the DC-Out. Tape over any bright LEDs on the LM2596 board just in case they have some UV emission.
+
+![LM2596](./Images/LM2596.jpg)
+
+I turned on the printer, and adjusted the voltage turning down the potentiometer until I could feel a gentle suction at the top of the Parapet (while filled with carbon pellets). I was able to fit the fan wires next to the Z endstop, 
+
+![Fan wire through the endstop hole](./Images/WirePastEndstop.jpg)
 
 ## CAD
 
